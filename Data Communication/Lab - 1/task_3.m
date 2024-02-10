@@ -23,9 +23,10 @@ t = 0: (T/100) : 3*T;
 
 x1 = k1 * cos(2 * pi * f1 * t + j1);
 x2 = k2 * cos(2 * pi * f2 * t + j2);
+x3 = x1 + x2;
 
 subplot(311);
-plot(t, x1)
+plot(t, x1, 'r-')
 title('plotting AC voltage over time')
 xlabel('time')
 ylabel('voltage')
@@ -35,7 +36,7 @@ title('plotting AC voltage over time')
 xlabel('time')
 ylabel('voltage')
 subplot(313)
-plot(t, x3)
+plot(t, x3, 'g-')
 title('plotting AC voltage over time')
 xlabel('time')
 ylabel('voltage')
