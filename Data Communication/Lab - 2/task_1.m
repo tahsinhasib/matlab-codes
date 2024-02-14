@@ -34,10 +34,11 @@ x2 = a2*cos(2*pi*f2*t);
 x3 = a3*cos(2*pi*f3*t);
 signal_x = x1 + x2 + x3; 
 nx = length(t); % Total number of samples 
+
 %Plot to illustrate that it is a sine wave 
 
 subplot(2,1,1);
-plot(t, signal_x,'linewidth',1); 
+plot(t, signal_x,'linewidth', 1); 
 title('Time-Domain Representation of Signal'); 
 xlabel('Time (s)'); 
 ylabel('Amplitude'); 
