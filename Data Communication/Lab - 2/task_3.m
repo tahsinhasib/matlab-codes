@@ -23,22 +23,31 @@ f3 = 6;
 
 
 %Define number of samples to take 
+
 fs = 8000;  
+
+
+
 %Define signal 
+
 t = 0: 1/fs: 1; 
+
 
 
 x1 = a1*cos(2*pi*f1*t);
 x2 = a2*cos(2*pi*f2*t);
 x3 = a3*cos(2*pi*f3*t);
+
 signal_x = x1 + x2 + x3; 
-nx = length(t); % Total number of samples 
-%Plot to illustrate that it is a sine wave 
+
+nx = length(t);                         % Total number of samples 
+
 
 
 
 n = 3; 
 L =(2^n); 
+
 Xmax = max(signal_x);
 Xmin = min(signal_x);
 
@@ -47,13 +56,11 @@ index = round((signal_x - Xmin)/step);
 xq = Xmin + index * step;
 
 
-
-plot(t,signal_x,'r-.', 'linewidth',1.5); 
+plot(t,signal_x, 'r-.', 'linewidth',1.5); 
 hold on; 
 plot(t,xq,'k-.', 'linewidth',1.5); 
-%plotting wave forms. 
 xlabel('time') 
 ylabel('amplitude') 
 title('example of manual quantization') 
-legend('Original signal','quantized signal')
+legend('Original signal', 'quantized signal')
 
