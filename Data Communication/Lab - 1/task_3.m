@@ -30,11 +30,13 @@ plot(t, x1, 'r-')
 title('plotting AC voltage over time')
 xlabel('time')
 ylabel('voltage')
+
 subplot(312);
 plot(t, x2)
 title('plotting AC voltage over time')
 xlabel('time')
 ylabel('voltage')
+
 subplot(313)
 plot(t, x3, 'g-')
 title('plotting AC voltage over time')
